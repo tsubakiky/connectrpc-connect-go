@@ -893,6 +893,7 @@ func (u *connectStreamingUnmarshaler) Unmarshal(message any) *Error {
 	if err := json.Unmarshal(data.Bytes(), &end); err != nil {
 		return errorf(CodeInternal, "unmarshal end stream message: %w", err)
 	}
+	Dump(end)
 	for name, value := range end.Trailer {
 		canonical := http.CanonicalHeaderKey(name)
 		if name != canonical {

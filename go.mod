@@ -9,6 +9,7 @@ retract (
 
 require (
 	github.com/google/go-cmp v0.5.9
+	github.com/kortschak/utter v1.7.0
 	golang.org/x/net v0.33.0
 	google.golang.org/protobuf v1.34.2
 )
